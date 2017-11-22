@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/books', '\App\Http\Controllers\BooksController@index')->name('books.list');
+Route::get('/booksData', '\App\Http\Controllers\BooksController@booksData')->name('books.data');
+Route::get('/books/{id}', '\App\Http\Controllers\BooksController@edit')->name('books.edit');
+Route::delete('/books/{id}', '\App\Http\Controllers\BooksController@remove')->name('books.delete');
