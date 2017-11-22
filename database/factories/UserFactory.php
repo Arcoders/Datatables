@@ -32,6 +32,13 @@ $factory->define(App\Author::class, function (Faker $faker) {
 
 });
 
+$factory->define(App\Library::class, function(Faker $faker)
+{
+    return [
+        'name' => 'Lib_' . $faker->firstName
+    ];
+});
+
 $factory->define(App\Book::class, function (Faker $faker) {
 
     return [
