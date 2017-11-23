@@ -58,9 +58,9 @@
                     { data: 'name', name: 'name' },
                     { data: 'isbn', name: 'isbn' },
                     { data: 'author.name', name: 'author.name'},
-                    { data: 'formatted_libraries', name: 'formatted_libraries', 'orderable': false },
+                    { data: 'formatted_libraries', name: 'formatted_libraries', 'orderable': false, searchable: true },
                     { data: 'formatted_created', name: 'created_at' },
-                    { data: 'actions', name: 'actions', 'orderable': false }
+                    { data: 'actions', name: 'actions', 'orderable': false, searchable: false }
                 ]
             });
         });

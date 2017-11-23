@@ -26,7 +26,7 @@
     <div class="container">@yield('content')</div>
 </div>
 
-<script src="/js/app.js">
+<script src="/js/app.js"></script>
 
 @stack('scripts')
 

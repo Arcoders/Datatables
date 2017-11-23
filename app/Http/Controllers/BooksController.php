@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Yajra\DataTables\Contracts\DataTable;
+use App\Book;
+use Yajra\DataTables\Facades\DataTables;
+
 
 class BooksController extends Controller
 {
@@ -16,10 +17,10 @@ class BooksController extends Controller
     public function booksData()
     {
         $model = Book::with('libraries', 'author')->withTrashed();
-        $actions = 'books.datatables.actions';
 
         return DataTables::eloquent($model)
-                            ->addColumn('action', $actions)
+                            ->addColumn('actions', 'books.datatables.actions')
+                            ->rawColumns(['actions'])
                             ->make(true);
     }
 
